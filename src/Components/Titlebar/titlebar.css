@@ -1,0 +1,58 @@
+.titlebar {
+    display: flex;
+    background-color: rgb(255, 125, 38);
+    height: 60px;
+    justify-content: space-around;
+    position: sticky;
+    top:0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.title {
+    margin: 1rem;
+    display: flex;
+    flex: 2;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+
+.title-body {
+    display: flex;
+    flex: 9;
+    align-items: center;
+    justify-content: center;
+}
+
+.topCenter {
+    display: flex;
+    flex: 7;
+    align-items: left;
+    list-style: none;
+}
+
+.list-item {
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.dd-list {
+    border: none;
+    background-color: rgb(255, 125, 38);
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
+
+.page-link {
+    text-decoration: none;
+    color: white;
+}
+
+.topRight {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
