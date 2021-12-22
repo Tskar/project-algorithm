@@ -2,3 +2,10 @@
     flex: 9;
 
 }
+
+.array-bars {
+    width: 40px;
+    margin: 1px;
+    background-color: orange; 
+    display: inline-block;
+}
