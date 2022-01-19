@@ -1,5 +1,78 @@
 .sidebar {
-    flex: 1;
-    background-color: rgb(255, 125, 38);
+
+    margin: 1px;
+    flex: 2;
+}
+
+.dd-menu {
+
+    background-color: #831618;
+    width: 10rem;
+    height: 1rem;
     color: white;
+    transition: 800ms;
+    overflow: hidden;
+}
+
+.dd-menu.active {
+
+    height: 10rem;
+    background-color: #831618;
+    color: white;
+    transition: 500ms;
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+}
+
+.fas {
+
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dd-buttons {
+
+    margin-top: 5px;
+    width: 100%;
+    background-color: #831618;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.generate {
+
+    background-color: #831618;
+    font-family: 'Open Sans', sans-serif;
+    font-size: medium;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.sort {
+
+    background-color: #831618;
+    font-family: 'Open Sans', sans-serif;
+    font-size: medium;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.sliders {
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+    background-color: #831618;
+}
+
+label {
+    align-self: center;
+    font-family: 'Roboto', sans-serif;
+    font-size:0.8em;
 }

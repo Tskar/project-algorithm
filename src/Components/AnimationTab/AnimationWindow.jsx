@@ -1,42 +1,31 @@
 import './animationWindow.css'
-import React, { useEffect, useState } from 'react';
-import BubbleSortAlgo from '../../Algorithms/BubbleSortAlgo';
+import React from 'react';
 
-function AnimationWindow () {
 
-    const [array, setArray] = useState([]);
-
-    useEffect (() => {
-
-        createArray();
-    }, []);
-
-    const createArray=() => {
-        const array = [];
-
-        for (let i = 0; i < 10; i++) {
-            array.push(randomNumber(5, 200));
-        }
-
-        setArray(array);
-        console.log(array);
-    }
-
-    function randomNumber(minimumNumber, maximumNumber) {
-        return Math.floor(Math.random() * parseInt((maximumNumber-minimumNumber) + minimumNumber));
-    }
-    
+function AnimationWindow ({array, compare, color, quantity}) {
 
     return (
         <div className='displayPage'>
-            {array.map((item, idx) => 
-                (<div key={idx} className='array-bars' 
-                    style={{height: `${item}px`}}>
+            {array.map((item, id) => {
+                let bgcolor = '#ffe3e3'
+
+                if(id === compare[0] || id === compare[1]){
+                    bgcolor = color
+                } 
+
+                const style = {
+                    'backgroundColor': bgcolor,
+                    'color' : `${(parseInt(quantity) >= 15)? 'transparent' : 'black'}`,
+                    'height': `${item}px`,
+                    'width' : `${300/ parseInt(quantity)}px`
+                }
+
+                return (<div key={id} className='array-bars'
+                    style={style}>
                         {item}
                 </div>)
-            )}
-            <button className='generate' onClick={() => createArray()}>Generate</button>
-            <BubbleSortAlgo array = {array} />
+            })
+            }
         </div>
     );
 };
