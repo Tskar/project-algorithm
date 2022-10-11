@@ -24,6 +24,7 @@ function App() {
   }, [quantity, algorithmType]);
 
   const createArray=() => {
+
       const array = [];
       setPlaying(false)
       if(algorithmType !== null){
@@ -36,7 +37,7 @@ function App() {
   }
 
   function randomNumber(minimumNumber, maximumNumber) {
-      return Math.floor(Math.random() * parseInt(maximumNumber-minimumNumber) + minimumNumber);
+    return Math.floor(Math.random() * parseInt(maximumNumber-minimumNumber) + minimumNumber);
   }
 
   const handleAlgorithm = (e) => {
